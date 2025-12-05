@@ -24,7 +24,7 @@ const ServicesOverview = () => {
       label: "Courses",
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -43,7 +43,7 @@ const ServicesOverview = () => {
       label: "Communities",
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -62,7 +62,7 @@ const ServicesOverview = () => {
       label: "Coaching & Consulting",
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -81,7 +81,7 @@ const ServicesOverview = () => {
       label: "Merchandise",
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -100,7 +100,7 @@ const ServicesOverview = () => {
       label: "Podcasts",
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -119,7 +119,7 @@ const ServicesOverview = () => {
       label: "Events",
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -138,7 +138,7 @@ const ServicesOverview = () => {
       label: "Brokerage",
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -161,47 +161,63 @@ const ServicesOverview = () => {
   ];
 
   return (
-    <section className="bg-white py-12 md:py-16">
-      <div className="container mx-auto px-4 max-w-7xl">
+    <section
+      className="py-8 sm:py-10 md:py-12 lg:py-16"
+      style={{
+        background:
+          "linear-gradient(180deg, rgba(249, 196, 254, 0) 0%, rgba(252, 221, 255, 0.5) 44.34%, rgba(249, 196, 254, 0) 100%)",
+      }}
+    >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Trust Section */}
-        <div className="text-center mb-12">
-          <p className="text-gray-600 text-sm font-medium mb-6">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12">
+          <p className="text-gray-600 text-xs sm:text-sm font-medium mb-4 sm:mb-6">
             TRUSTED BY +10,000 CONSULTANTS & ORGANISATIONS
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
-            {companyLogos.map((logo, index) => (
-              <CompanyLogo key={index} name={logo} />
-            ))}
+          <div
+            className="overflow-hidden w-full"
+            style={{ background: "#F6F5F5" }}
+          >
+            <div className="flex items-center justify-center gap-6 md:gap-8 marquee-logos py-4">
+              {/* First set of logos */}
+              {companyLogos.map((logo, index) => (
+                <CompanyLogo key={`logo-1-${index}`} name={logo} />
+              ))}
+              {/* Duplicate set for seamless loop */}
+              {companyLogos.map((logo, index) => (
+                <CompanyLogo key={`logo-2-${index}`} name={logo} />
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Banner & Headline Section */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12">
           {/* DIVERSIFY REVENUE STREAM Banner */}
           <div
-            className="inline-block px-6 py-2 rounded-md mb-6"
+            className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 rounded-full mb-3 sm:mb-4"
             style={{
-              background: "linear-gradient(89.85deg, #FAC1FD 0%, #F75EFF 100%)",
+              background: "linear-gradient(90.66deg, #FCC3FF 0%, #F75EFF 100%)",
             }}
           >
-            <span className="text-white font-bold text-sm">
+            <span className="text-black font-bold text-[10px] sm:text-xs">
               DIVERSIFY REVENUE STREAM
             </span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 leading-tight max-w-4xl mx-auto">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-3 sm:mb-4 leading-tight max-w-4xl mx-auto px-2">
             Maximise earnings with limitless revenue streams.
           </h1>
 
           {/* Subtitle */}
-          <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto mb-8">
+          <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
             Create and sell courses, consulting services, and communities - with
             Zero marketing cost and a built-in sales network.
           </p>
 
           {/* Feature Navigation Bar */}
-          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 bg-gray-50 rounded-lg p-2 max-w-5xl mx-auto">
+          <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 md:gap-3 bg-[#ffffffc7] rounded-full p-1.5 sm:p-2 max-w-5xl mx-auto">
             {features.map((feature) => (
               <FeatureNavItem
                 key={feature.id}

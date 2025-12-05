@@ -37,3 +37,18 @@ body {
 .marquee {
   animation: marquee 30s linear infinite;
 }
+
+@keyframes marquee-logos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-logos {
+  animation: marquee-logos 20s linear infinite;
+  display: flex;
+  width: fit-content;
+}
