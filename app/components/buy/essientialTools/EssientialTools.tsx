@@ -20,7 +20,8 @@ const EssientialTools = () => {
     },
     {
       title: "Analytics",
-      description: "Understand your growth with smart, built-in analytics.",
+      description:
+        "Understand your growth with smart, built-in analytics tools here.",
       icon: <AnalyticsIcon />,
     },
     {
@@ -62,12 +63,19 @@ const EssientialTools = () => {
   ];
 
   return (
-    <section className="bg-[#f5f5f0] py-16 px-4">
+    <section className="bg-[#FDF6E8] py-16 px-4">
       <div className="container mx-auto max-w-7xl">
         {/* Header Section */}
         <div className="text-center mb-12">
           {/* Pill Label */}
-          <div className="inline-block px-4 py-1.5 bg-gray-800 text-white text-xs font-medium rounded-full mb-4">
+          <div
+            className="inline-block px-4 py-1.5 text-black  text-xs font-bold rounded-full mb-4"
+            style={{
+              backgroundColor: "#BCB3A0",
+              background:
+                "linear-gradient(84deg, rgba(188, 179, 160, 1) 0%, rgba(224, 216, 201, 1) 80%)",
+            }}
+          >
             ESSENTIAL TOOLS
           </div>
 
@@ -88,13 +96,17 @@ const EssientialTools = () => {
         {/* Tools Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {tools.map((tool, index) => (
-            <ToolCard
+            <div
               key={`${tool.title}-${index}`}
-              title={tool.title}
-              description={tool.description}
-              icon={tool.icon}
-              isEnterprise={tool.isEnterprise}
-            />
+              className={tool.isEnterprise ? "md:col-span-2 lg:col-span-2" : ""}
+            >
+              <ToolCard
+                title={tool.title}
+                description={tool.description}
+                icon={tool.icon}
+                isEnterprise={tool.isEnterprise}
+              />
+            </div>
           ))}
         </div>
       </div>

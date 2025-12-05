@@ -5,24 +5,24 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer
-      className="text-white relative overflow-hidden min-h-[500px]"
+      className="text-white relative overflow-hidden min-h-[450px] sm:min-h-[500px] md:min-h-[550px] lg:min-h-[600px] pb-[80px] sm:pb-[100px] md:pb-[120px] lg:pb-[150px]"
       style={{
-        background:
-          "linear-gradient(178deg, rgba(37, 22, 33, 1) 0%, rgba(66, 35, 43, 1) 50%)",
-        backgroundColor: "#251621",
+        background: "linear-gradient(180deg, #251621 0%, #42233A 100%)",
       }}
     >
-      <div className="container mx-auto px-4 py-12 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-4 py-8 md:py-12 relative z-10">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
           {/* About Us Column */}
-          <div>
-            <h3 className="text-2xl font-bold mb-4">About Us</h3>
+          <div className="md:ml-0 lg:ml-20">
+            <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">
+              About Us
+            </h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/resources"
-                  className="text-white hover:text-gray-300 transition-colors"
+                  className="text-white/70 hover:text-white transition-colors text-sm md:text-base"
                 >
                   Resources
                 </Link>
@@ -30,7 +30,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/company"
-                  className="text-white hover:text-gray-300 transition-colors"
+                  className="text-white/70 hover:text-white transition-colors text-sm md:text-base"
                 >
                   Company
                 </Link>
@@ -38,7 +38,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/property"
-                  className="text-white hover:text-gray-300 transition-colors"
+                  className="text-white/70 hover:text-white transition-colors text-sm md:text-base"
                 >
                   Property
                 </Link>
@@ -46,7 +46,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/contact"
-                  className="text-white hover:text-gray-300 transition-colors"
+                  className="text-white/70 hover:text-white transition-colors text-sm md:text-base"
                 >
                   Contact Us
                 </Link>
@@ -56,27 +56,35 @@ const Footer = () => {
 
           {/* Contact Us Column */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Contact Us</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">
+              Contact Us
+            </h3>
             <div className="space-y-2">
-              <p className="text-white">hello abc@gmail.com</p>
-              <p className="text-white">+012233455667</p>
+              <p className="text-white/70 text-sm md:text-base">
+                hello abc@gmail.com
+              </p>
+              <p className="text-white/70 text-sm md:text-base">
+                +012233455667
+              </p>
             </div>
           </div>
 
           {/* Follow Us Column */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Follow Us</h3>
-            <div className="flex items-center gap-3">
+            <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">
+              Follow Us
+            </h3>
+            <div className="flex items-center gap-2 md:gap-3 flex-wrap">
               {/* Facebook */}
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                className="w-9 h-9 md:w-10 md:h-10 rounded-full border border-white flex items-center justify-center hover:bg-white/10 transition-colors"
                 aria-label="Facebook"
               >
                 <svg
-                  className="w-5 h-5 text-white"
+                  className="w-4 h-4 md:w-5 md:h-5 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -89,11 +97,11 @@ const Footer = () => {
                 href="https://x.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                className="w-9 h-9 md:w-10 md:h-10 rounded-full border border-white flex items-center justify-center hover:bg-white/10 transition-colors"
                 aria-label="X (Twitter)"
               >
                 <svg
-                  className="w-5 h-5 text-white"
+                  className="w-4 h-4 md:w-5 md:h-5 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -106,11 +114,11 @@ const Footer = () => {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                className="w-9 h-9 md:w-10 md:h-10 rounded-full border border-white flex items-center justify-center hover:bg-white/10 transition-colors"
                 aria-label="Instagram"
               >
                 <svg
-                  className="w-5 h-5 text-white"
+                  className="w-4 h-4 md:w-5 md:h-5 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -123,11 +131,11 @@ const Footer = () => {
                 href="https://whatsapp.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                className="w-9 h-9 md:w-10 md:h-10 rounded-full border border-white flex items-center justify-center hover:bg-white/10 transition-colors"
                 aria-label="WhatsApp"
               >
                 <svg
-                  className="w-5 h-5 text-white"
+                  className="w-4 h-4 md:w-5 md:h-5 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -138,10 +146,12 @@ const Footer = () => {
               {/* Custom 'a' icon */}
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                className="w-9 h-9 md:w-10 md:h-10 rounded-full border border-white flex items-center justify-center hover:bg-white/10 transition-colors"
                 aria-label="Social Media"
               >
-                <span className="text-white font-bold text-lg">a</span>
+                <span className="text-white font-bold text-base md:text-lg">
+                  a
+                </span>
               </a>
 
               {/* TikTok */}
@@ -149,11 +159,11 @@ const Footer = () => {
                 href="https://tiktok.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                className="w-9 h-9 md:w-10 md:h-10 rounded-full border border-white flex items-center justify-center hover:bg-white/10 transition-colors"
                 aria-label="TikTok"
               >
                 <svg
-                  className="w-5 h-5 text-white"
+                  className="w-4 h-4 md:w-5 md:h-5 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -165,14 +175,25 @@ const Footer = () => {
         </div>
 
         {/* Copyright Notice */}
-        <div className="text-right mb-4">
-          <p className="text-white">© 2025 Havenix. All rights reserved.</p>
+        <div className="text-center md:text-right -mt-2 md:-mt-10 md:mr-0 lg:mr-20 mb-4 md:mb-0">
+          <p className="text-white/70 text-sm md:text-base">
+            © 2025 Havenix. All rights reserved.
+          </p>
         </div>
       </div>
 
       {/* Large WiztecBD Text */}
-      <div className="absolute bottom-0 left-0 right-0 text-center pb-4">
-        <h1 className="text-[100px] md:text-[150px] lg:text-[200px] xl:text-[250px] font-bold text-white/30 leading-none select-none tracking-tight">
+      <div className="absolute bottom-0 left-0 right-0 text-center pb-2 md:pb-4">
+        <h1
+          className="text-[60px] sm:text-[80px] md:text-[120px] lg:text-[180px] xl:text-[220px] 2xl:text-[250px] font-bold leading-none select-none tracking-tight"
+          style={{
+            background:
+              "linear-gradient(90deg, #8A7384 28.67%, #CAC3C3 46.17%)",
+            WebkitBackgroundClip: "text",
+            backgroundClip: "text",
+            color: "transparent",
+          }}
+        >
           WiztecBD
         </h1>
       </div>
