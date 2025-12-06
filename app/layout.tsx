@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Wiztecbd ",
+  icons: {
+    icon: "/logo.ico",
+  },
   description:
     "WizTechBD is a technology company that provides technology solutions to businesses and individuals",
 };
@@ -28,6 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-7xl mx-auto`}
+        suppressHydrationWarning
       >
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>

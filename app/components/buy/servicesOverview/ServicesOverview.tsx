@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import SectionHeader from "../../Shared/SectionHeader";
 import CompanyLogo from "./CompanyLogo";
 import FeatureDetail from "./FeatureDetail";
 import FeatureNavItem from "./FeatureNavItem";
@@ -192,29 +193,18 @@ const ServicesOverview = () => {
         </div>
 
         {/* Banner & Headline Section */}
-        <div className="text-center mb-8 sm:mb-10 md:mb-12">
-          {/* DIVERSIFY REVENUE STREAM Banner */}
-          <div
-            className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 rounded-full mb-3 sm:mb-4"
-            style={{
-              background: "linear-gradient(90.66deg, #FCC3FF 0%, #F75EFF 100%)",
-            }}
-          >
-            <span className="text-black font-bold text-[10px] sm:text-xs">
-              DIVERSIFY REVENUE STREAM
-            </span>
-          </div>
-
-          {/* Main Headline */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-3 sm:mb-4 leading-tight max-w-4xl mx-auto px-2">
-            Maximise earnings with limitless revenue streams.
-          </h1>
-
-          {/* Subtitle */}
-          <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
-            Create and sell courses, consulting services, and communities - with
-            Zero marketing cost and a built-in sales network.
-          </p>
+        <div className="mb-8 sm:mb-10 md:mb-12">
+          <SectionHeader
+            badgeText="DIVERSIFY REVENUE STREAM"
+            badgeGradient="linear-gradient(90.66deg, #FCC3FF 0%, #F75EFF 100%)"
+            title="Maximise earnings with limitless revenue streams."
+            titleAs="h1"
+            titleColor="text-gray-800"
+            description="Create and sell courses, consulting services, and communities - with Zero marketing cost and a built-in sales network."
+            descriptionColor="text-gray-600"
+            titleClassName="max-w-4xl mx-auto"
+            descriptionClassName="max-w-3xl mb-6 sm:mb-8 px-4"
+          />
 
           {/* Feature Navigation Bar */}
           <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 md:gap-3 bg-[#ffffffc7] rounded-full p-1.5 sm:p-2 max-w-5xl mx-auto">

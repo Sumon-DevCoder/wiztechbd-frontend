@@ -52,7 +52,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -69,7 +69,7 @@ const Navbar = () => {
           </nav>
 
           {/* Desktop User Actions */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             <Link
               href="/favourite"
               className="flex items-center gap-2 text-gray-700 hover:text-[#59344F] transition-colors"
@@ -98,7 +98,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile User Actions & Hamburger */}
-          <div className="flex md:hidden items-center gap-3">
+          <div className="flex lg:hidden items-center gap-3">
             <Link
               href="/favourite"
               className="text-gray-700 hover:text-[#59344F] transition-colors"
@@ -159,7 +159,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
             isMobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
           }`}
         >

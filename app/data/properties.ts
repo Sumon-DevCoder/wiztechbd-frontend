@@ -1,7 +1,7 @@
 export interface Property {
   id: number;
   name: string;
-  image: string;
+  images: string[];
   beds: number;
   bathrooms: number;
   sqft: number;
@@ -16,8 +16,13 @@ export const dummyProperties: Property[] = [
   {
     id: 1,
     name: "Maple Grove Garden House",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600591370556-0e42e83e0b1b?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+    ],
     beds: 4,
     bathrooms: 4,
     sqft: 2500,
@@ -30,8 +35,13 @@ export const dummyProperties: Property[] = [
   {
     id: 2,
     name: "Sunset Towers Eklosbet",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+    ],
     beds: 7,
     bathrooms: 4,
     sqft: 6500,
@@ -44,8 +54,13 @@ export const dummyProperties: Property[] = [
   {
     id: 3,
     name: "Riverside Retreat",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600591370556-0e42e83e0b1b?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop",
+    ],
     beds: 4,
     bathrooms: 3,
     sqft: 3500,
@@ -58,8 +73,13 @@ export const dummyProperties: Property[] = [
   {
     id: 4,
     name: "Golden Meadows",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600591370556-0e42e83e0b1b?w=800&h=600&fit=crop",
+    ],
     beds: 6,
     bathrooms: 4,
     sqft: 4500,
@@ -72,8 +92,13 @@ export const dummyProperties: Property[] = [
   {
     id: 5,
     name: "Ocean Sea Breeze",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+    ],
     beds: 8,
     bathrooms: 6,
     sqft: 9500,
@@ -86,8 +111,13 @@ export const dummyProperties: Property[] = [
   {
     id: 6,
     name: "The Urban Nest Lofts",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+    ],
     beds: 6,
     bathrooms: 4,
     sqft: 5500,
@@ -100,8 +130,13 @@ export const dummyProperties: Property[] = [
   {
     id: 7,
     name: "Luxury Skyline Penthouse",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+    ],
     beds: 5,
     bathrooms: 3,
     sqft: 3200,
@@ -114,8 +149,13 @@ export const dummyProperties: Property[] = [
   {
     id: 8,
     name: "Modern Glass Villa",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+    ],
     beds: 5,
     bathrooms: 4,
     sqft: 4200,
@@ -128,8 +168,13 @@ export const dummyProperties: Property[] = [
   {
     id: 9,
     name: "Coastal Breeze Estate",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop",
+    ],
     beds: 7,
     bathrooms: 5,
     sqft: 5500,
@@ -137,13 +182,18 @@ export const dummyProperties: Property[] = [
     location: "New York, USA",
     suburb: "59/3 Eshelby Drive Cannonvale",
     propertyType: "House",
-    amenities: ["Parking", "Private Pool"],
+    amenities: ["Parking", "Private Pool", "Wifi", "Gym"],
   },
   {
     id: 10,
     name: "Serene Countryside Home",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600591370556-0e42e83e0b1b?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+    ],
     beds: 4,
     bathrooms: 3,
     sqft: 3800,
@@ -156,8 +206,13 @@ export const dummyProperties: Property[] = [
   {
     id: 11,
     name: "Downtown Loft Apartment",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600591370556-0e42e83e0b1b?w=800&h=600&fit=crop",
+    ],
     beds: 3,
     bathrooms: 2,
     sqft: 1800,
@@ -170,8 +225,13 @@ export const dummyProperties: Property[] = [
   {
     id: 12,
     name: "Elegant Townhouse",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+    ],
     beds: 5,
     bathrooms: 3,
     sqft: 3400,
@@ -184,8 +244,13 @@ export const dummyProperties: Property[] = [
   {
     id: 13,
     name: "Mountain View Estate",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+    ],
     beds: 6,
     bathrooms: 5,
     sqft: 4800,
@@ -198,8 +263,13 @@ export const dummyProperties: Property[] = [
   {
     id: 14,
     name: "City Center Apartment",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600591370556-0e42e83e0b1b?w=800&h=600&fit=crop",
+    ],
     beds: 2,
     bathrooms: 1,
     sqft: 1200,
@@ -212,8 +282,13 @@ export const dummyProperties: Property[] = [
   {
     id: 15,
     name: "Luxury Waterfront Villa",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop",
+    ],
     beds: 9,
     bathrooms: 7,
     sqft: 12000,
@@ -226,8 +301,13 @@ export const dummyProperties: Property[] = [
   {
     id: 16,
     name: "Garden View Townhouse",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600591370556-0e42e83e0b1b?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+    ],
     beds: 4,
     bathrooms: 3,
     sqft: 2800,
@@ -240,8 +320,13 @@ export const dummyProperties: Property[] = [
   {
     id: 17,
     name: "Modern Studio Loft",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+    ],
     beds: 1,
     bathrooms: 1,
     sqft: 900,
@@ -254,8 +339,13 @@ export const dummyProperties: Property[] = [
   {
     id: 18,
     name: "Spacious Family Home",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+    ],
     beds: 5,
     bathrooms: 4,
     sqft: 3800,
@@ -268,8 +358,13 @@ export const dummyProperties: Property[] = [
   {
     id: 19,
     name: "Rural Countryside Acreage",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+    ],
     beds: 4,
     bathrooms: 3,
     sqft: 4200,
@@ -282,8 +377,13 @@ export const dummyProperties: Property[] = [
   {
     id: 20,
     name: "Premium Downtown Apartment",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+    ],
     beds: 3,
     bathrooms: 2,
     sqft: 2100,
@@ -296,8 +396,13 @@ export const dummyProperties: Property[] = [
   {
     id: 21,
     name: "Beachside Luxury Villa",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop",
+    ],
     beds: 8,
     bathrooms: 6,
     sqft: 8800,
@@ -310,8 +415,13 @@ export const dummyProperties: Property[] = [
   {
     id: 22,
     name: "Cozy Cottage Home",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600591370556-0e42e83e0b1b?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+    ],
     beds: 3,
     bathrooms: 2,
     sqft: 2200,
@@ -324,8 +434,13 @@ export const dummyProperties: Property[] = [
   {
     id: 23,
     name: "Executive Penthouse Suite",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600591370556-0e42e83e0b1b?w=800&h=600&fit=crop",
+    ],
     beds: 4,
     bathrooms: 3,
     sqft: 3600,
@@ -338,8 +453,13 @@ export const dummyProperties: Property[] = [
   {
     id: 24,
     name: "Historic Townhouse",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+    ],
     beds: 5,
     bathrooms: 4,
     sqft: 4000,
@@ -352,8 +472,13 @@ export const dummyProperties: Property[] = [
   {
     id: 25,
     name: "Lakeside Retreat Villa",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600591370556-0e42e83e0b1b?w=800&h=600&fit=crop",
+    ],
     beds: 7,
     bathrooms: 5,
     sqft: 6200,
@@ -366,8 +491,13 @@ export const dummyProperties: Property[] = [
   {
     id: 26,
     name: "Urban Studio Apartment",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+    ],
     beds: 1,
     bathrooms: 1,
     sqft: 850,
@@ -380,8 +510,13 @@ export const dummyProperties: Property[] = [
   {
     id: 27,
     name: "Grand Estate Mansion",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop",
+    ],
     beds: 10,
     bathrooms: 8,
     sqft: 15000,
@@ -394,8 +529,13 @@ export const dummyProperties: Property[] = [
   {
     id: 28,
     name: "Modern Duplex Townhouse",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600591370556-0e42e83e0b1b?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+    ],
     beds: 4,
     bathrooms: 3,
     sqft: 3100,
@@ -408,8 +548,13 @@ export const dummyProperties: Property[] = [
   {
     id: 29,
     name: "Budget Friendly Apartment",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+    ],
     beds: 2,
     bathrooms: 1,
     sqft: 1100,
@@ -422,8 +567,13 @@ export const dummyProperties: Property[] = [
   {
     id: 30,
     name: "Luxury Countryside Acreage",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+    ],
     beds: 6,
     bathrooms: 4,
     sqft: 5200,
@@ -436,8 +586,13 @@ export const dummyProperties: Property[] = [
   {
     id: 31,
     name: "Compact City Apartment",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+    ],
     beds: 2,
     bathrooms: 1,
     sqft: 1000,
@@ -450,8 +605,13 @@ export const dummyProperties: Property[] = [
   {
     id: 32,
     name: "Seaside Luxury Villa",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600591370556-0e42e83e0b1b?w=800&h=600&fit=crop",
+    ],
     beds: 8,
     bathrooms: 6,
     sqft: 9200,
@@ -464,8 +624,13 @@ export const dummyProperties: Property[] = [
   {
     id: 33,
     name: "Family Friendly Home",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600591370556-0e42e83e0b1b?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+    ],
     beds: 5,
     bathrooms: 3,
     sqft: 3600,
@@ -478,8 +643,13 @@ export const dummyProperties: Property[] = [
   {
     id: 34,
     name: "Contemporary Loft Apartment",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+    ],
     beds: 3,
     bathrooms: 2,
     sqft: 2400,
@@ -492,8 +662,13 @@ export const dummyProperties: Property[] = [
   {
     id: 35,
     name: "Rustic Countryside Acreage",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop",
+    ],
     beds: 4,
     bathrooms: 3,
     sqft: 4100,
@@ -506,8 +681,13 @@ export const dummyProperties: Property[] = [
   {
     id: 36,
     name: "Premium Townhouse Complex",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+    ],
     beds: 6,
     bathrooms: 4,
     sqft: 4700,

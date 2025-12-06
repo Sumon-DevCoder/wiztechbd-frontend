@@ -8,7 +8,7 @@ interface TestimonialCardProps {
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
   return (
-    <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg flex flex-col lg:flex-row gap-4 sm:gap-5 md:gap-6 w-[calc(100vw-2rem)] sm:w-[calc(100vw-4rem)] md:min-w-[500px] lg:min-w-[600px] xl:min-w-[700px] min-h-[450px] sm:min-h-[480px] md:h-[500px] lg:h-[400px]">
+    <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg flex flex-col lg:flex-row gap-4 sm:gap-5 md:gap-6 w-[calc(100vw-2rem)] sm:w-[calc(100vw-4rem)] md:min-w-[400px] lg:min-w-[480px] xl:min-w-[550px] min-h-[450px] sm:min-h-[480px] md:h-[500px] lg:h-[400px]">
       {/* Left Section - Video Thumbnail */}
       <div className="w-full lg:w-1/2 shrink-0 h-[200px] sm:h-[220px] md:h-[240px] lg:h-full">
         <div className="relative w-full h-full rounded-lg sm:rounded-xl overflow-hidden bg-gray-200">

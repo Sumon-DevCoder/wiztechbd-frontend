@@ -259,8 +259,8 @@ export const NewslettersIcon: React.FC<{ className?: string }> = ({
         y2="38.5942"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FEF8D7" />
-        <stop offset="1" stop-color="#FDE670" />
+        <stop stopColor="#FEF8D7" />
+        <stop offset="1" stopColor="#FDE670" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_2_4850"
@@ -270,8 +270,8 @@ export const NewslettersIcon: React.FC<{ className?: string }> = ({
         y2="32.2001"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#E1F8FE" />
-        <stop offset="1" stop-color="#83E2FC" />
+        <stop stopColor="#E1F8FE" />
+        <stop offset="1" stopColor="#83E2FC" />
       </linearGradient>
       <linearGradient
         id="paint2_linear_2_4850"
@@ -281,8 +281,8 @@ export const NewslettersIcon: React.FC<{ className?: string }> = ({
         y2="40.8494"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#F8DA30" />
-        <stop offset="1" stop-color="#FDAB22" />
+        <stop stopColor="#F8DA30" />
+        <stop offset="1" stopColor="#FDAB22" />
       </linearGradient>
       <linearGradient
         id="paint3_linear_2_4850"
@@ -292,8 +292,8 @@ export const NewslettersIcon: React.FC<{ className?: string }> = ({
         y2="12.5326"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#83DEFA" />
-        <stop offset="1" stop-color="#17ADF6" />
+        <stop stopColor="#83DEFA" />
+        <stop offset="1" stopColor="#17ADF6" />
       </linearGradient>
       <linearGradient
         id="paint4_linear_2_4850"
@@ -303,8 +303,8 @@ export const NewslettersIcon: React.FC<{ className?: string }> = ({
         y2="13.2686"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#AE71FD" />
-        <stop offset="1" stop-color="#974DF5" />
+        <stop stopColor="#AE71FD" />
+        <stop offset="1" stopColor="#974DF5" />
       </linearGradient>
       <linearGradient
         id="paint5_linear_2_4850"
@@ -314,8 +314,8 @@ export const NewslettersIcon: React.FC<{ className?: string }> = ({
         y2="20.6758"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#AE71FD" />
-        <stop offset="1" stop-color="#974DF5" />
+        <stop stopColor="#AE71FD" />
+        <stop offset="1" stopColor="#974DF5" />
       </linearGradient>
       <linearGradient
         id="paint6_linear_2_4850"
@@ -325,8 +325,8 @@ export const NewslettersIcon: React.FC<{ className?: string }> = ({
         y2="25.3633"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#AE71FD" />
-        <stop offset="1" stop-color="#974DF5" />
+        <stop stopColor="#AE71FD" />
+        <stop offset="1" stopColor="#974DF5" />
       </linearGradient>
     </defs>
   </svg>
@@ -551,9 +551,9 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="11.6013"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#76CCF8" />
-        <stop offset="0.833" stop-color="#518EF8" />
-        <stop offset="1" stop-color="#4981F8" />
+        <stop stopColor="#76CCF8" />
+        <stop offset="0.833" stopColor="#518EF8" />
+        <stop offset="1" stopColor="#4981F8" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_2_4900"
@@ -563,8 +563,8 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="19.4446"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#BCE097" />
-        <stop offset="1" stop-color="#7DC03A" />
+        <stop stopColor="#BCE097" />
+        <stop offset="1" stopColor="#7DC03A" />
       </linearGradient>
       <linearGradient
         id="paint2_linear_2_4900"
@@ -574,8 +574,8 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="27.2874"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#F7E07D" />
-        <stop offset="1" stop-color="#E69642" />
+        <stop stopColor="#F7E07D" />
+        <stop offset="1" stopColor="#E69642" />
       </linearGradient>
       <linearGradient
         id="paint3_linear_2_4900"
@@ -585,8 +585,8 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="35.0326"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#DC4955" />
-        <stop offset="1" stop-color="#C4237C" />
+        <stop stopColor="#DC4955" />
+        <stop offset="1" stopColor="#C4237C" />
       </linearGradient>
       <linearGradient
         id="paint4_linear_2_4900"
@@ -596,8 +596,8 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="8.23553"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#4071F7" stop-opacity="0" />
-        <stop offset="1" stop-color="#30569F" />
+        <stop stopColor="#4071F7" stopOpacity="0" />
+        <stop offset="1" stopColor="#30569F" />
       </linearGradient>
       <linearGradient
         id="paint5_linear_2_4900"
@@ -607,8 +607,8 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="16.0788"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#8CC951" stop-opacity="0" />
-        <stop offset="1" stop-color="#3E6E66" />
+        <stop stopColor="#8CC951" stopOpacity="0" />
+        <stop offset="1" stopColor="#3E6E66" />
       </linearGradient>
       <linearGradient
         id="paint6_linear_2_4900"
@@ -618,8 +618,8 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="31.7648"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#8A1958" stop-opacity="0" />
-        <stop offset="1" stop-color="#8A1958" />
+        <stop stopColor="#8A1958" stopOpacity="0" />
+        <stop offset="1" stopColor="#8A1958" />
       </linearGradient>
       <linearGradient
         id="paint7_linear_2_4900"
@@ -629,8 +629,8 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="35.399"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#8A1958" stop-opacity="0" />
-        <stop offset="1" stop-color="#8A1958" />
+        <stop stopColor="#8A1958" stopOpacity="0" />
+        <stop offset="1" stopColor="#8A1958" />
       </linearGradient>
       <linearGradient
         id="paint8_linear_2_4900"
@@ -640,11 +640,11 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="23.9216"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#D52C1C" stop-opacity="0" />
-        <stop offset="0.28" stop-color="#D12C1E" stop-opacity="0.28" />
-        <stop offset="0.5735" stop-color="#C42C23" stop-opacity="0.574" />
-        <stop offset="0.8721" stop-color="#AF2B2C" stop-opacity="0.872" />
-        <stop offset="1" stop-color="#A42B31" />
+        <stop stopColor="#D52C1C" stopOpacity="0" />
+        <stop offset="0.28" stopColor="#D12C1E" stopOpacity="0.28" />
+        <stop offset="0.5735" stopColor="#C42C23" stopOpacity="0.574" />
+        <stop offset="0.8721" stopColor="#AF2B2C" stopOpacity="0.872" />
+        <stop offset="1" stopColor="#A42B31" />
       </linearGradient>
       <linearGradient
         id="paint9_linear_2_4900"
@@ -654,11 +654,11 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="28.238"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#D52C1C" stop-opacity="0" />
-        <stop offset="0.28" stop-color="#D12C1E" stop-opacity="0.28" />
-        <stop offset="0.5735" stop-color="#C42C23" stop-opacity="0.574" />
-        <stop offset="0.8721" stop-color="#AF2B2C" stop-opacity="0.872" />
-        <stop offset="1" stop-color="#A42B31" />
+        <stop stopColor="#D52C1C" stopOpacity="0" />
+        <stop offset="0.28" stopColor="#D12C1E" stopOpacity="0.28" />
+        <stop offset="0.5735" stopColor="#C42C23" stopOpacity="0.574" />
+        <stop offset="0.8721" stopColor="#AF2B2C" stopOpacity="0.872" />
+        <stop offset="1" stopColor="#A42B31" />
       </linearGradient>
       <linearGradient
         id="paint10_linear_2_4900"
@@ -668,8 +668,8 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="19.7125"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#8CC951" stop-opacity="0" />
-        <stop offset="1" stop-color="#3E6E66" />
+        <stop stopColor="#8CC951" stopOpacity="0" />
+        <stop offset="1" stopColor="#3E6E66" />
       </linearGradient>
       <linearGradient
         id="paint11_linear_2_4900"
@@ -679,8 +679,8 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="11.8697"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#4071F7" stop-opacity="0" />
-        <stop offset="1" stop-color="#30569F" />
+        <stop stopColor="#4071F7" stopOpacity="0" />
+        <stop offset="1" stopColor="#30569F" />
       </linearGradient>
       <linearGradient
         id="paint12_linear_2_4900"
@@ -690,8 +690,8 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="38.4563"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#5A5A5A" />
-        <stop offset="1" stop-color="#464646" />
+        <stop stopColor="#5A5A5A" />
+        <stop offset="1" stopColor="#464646" />
       </linearGradient>
       <linearGradient
         id="paint13_linear_2_4900"
@@ -701,8 +701,8 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="20"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#5A5A5A" />
-        <stop offset="1" stop-color="#464646" />
+        <stop stopColor="#5A5A5A" />
+        <stop offset="1" stopColor="#464646" />
       </linearGradient>
       <linearGradient
         id="paint14_linear_2_4900"
@@ -712,8 +712,8 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="39.5363"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#464646" stop-opacity="0" />
-        <stop offset="1" stop-color="#202020" />
+        <stop stopColor="#464646" stopOpacity="0" />
+        <stop offset="1" stopColor="#202020" />
       </linearGradient>
       <linearGradient
         id="paint15_linear_2_4900"
@@ -723,8 +723,8 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="7.26632"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#5A5A5A" />
-        <stop offset="1" stop-color="#464646" />
+        <stop stopColor="#5A5A5A" />
+        <stop offset="1" stopColor="#464646" />
       </linearGradient>
       <linearGradient
         id="paint16_linear_2_4900"
@@ -734,8 +734,8 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="18.3567"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#464646" stop-opacity="0" />
-        <stop offset="1" stop-color="#202020" />
+        <stop stopColor="#464646" stopOpacity="0" />
+        <stop offset="1" stopColor="#202020" />
       </linearGradient>
       <linearGradient
         id="paint17_linear_2_4900"
@@ -745,8 +745,8 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="33.8864"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#EEF4FF" />
-        <stop offset="1" stop-color="#CFE7FD" />
+        <stop stopColor="#EEF4FF" />
+        <stop offset="1" stopColor="#CFE7FD" />
       </linearGradient>
       <linearGradient
         id="paint18_linear_2_4900"
@@ -756,8 +756,8 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="17.7073"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#464646" stop-opacity="0" />
-        <stop offset="1" stop-color="#202020" />
+        <stop stopColor="#464646" stopOpacity="0" />
+        <stop offset="1" stopColor="#202020" />
       </linearGradient>
       <linearGradient
         id="paint19_linear_2_4900"
@@ -767,8 +767,8 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="14.0886"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#EEF4FF" />
-        <stop offset="1" stop-color="#CFE7FD" />
+        <stop stopColor="#EEF4FF" />
+        <stop offset="1" stopColor="#CFE7FD" />
       </linearGradient>
       <linearGradient
         id="paint20_linear_2_4900"
@@ -778,8 +778,8 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="16.0585"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#8AAADC" stop-opacity="0" />
-        <stop offset="1" stop-color="#8AAADC" />
+        <stop stopColor="#8AAADC" stopOpacity="0" />
+        <stop offset="1" stopColor="#8AAADC" />
       </linearGradient>
       <linearGradient
         id="paint21_linear_2_4900"
@@ -789,8 +789,8 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="23.6297"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#EEF4FF" />
-        <stop offset="1" stop-color="#CFE7FD" />
+        <stop stopColor="#EEF4FF" />
+        <stop offset="1" stopColor="#CFE7FD" />
       </linearGradient>
       <linearGradient
         id="paint22_linear_2_4900"
@@ -800,8 +800,8 @@ export const ContactIcon: React.FC<{ className?: string }> = ({
         y2="23.8548"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#8AAADC" stop-opacity="0" />
-        <stop offset="1" stop-color="#8AAADC" />
+        <stop stopColor="#8AAADC" stopOpacity="0" />
+        <stop offset="1" stopColor="#8AAADC" />
       </linearGradient>
       <clipPath id="clip0_2_4900">
         <rect width="40" height="40" fill="white" />
@@ -916,8 +916,8 @@ export const EmailsIcon: React.FC<{ className?: string }> = ({
         y2="35.2944"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FFEFA4" />
-        <stop offset="1" stop-color="#FFBE50" />
+        <stop stopColor="#FFEFA4" />
+        <stop offset="1" stopColor="#FFBE50" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_2_4937"
@@ -927,12 +927,12 @@ export const EmailsIcon: React.FC<{ className?: string }> = ({
         y2="30.3427"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FFA100" stop-opacity="0" />
-        <stop offset="0.1593" stop-color="#FF9C03" stop-opacity="0.159" />
-        <stop offset="0.3553" stop-color="#FF8D0A" stop-opacity="0.355" />
-        <stop offset="0.5705" stop-color="#FF7416" stop-opacity="0.571" />
-        <stop offset="0.7979" stop-color="#FF5128" stop-opacity="0.798" />
-        <stop offset="1" stop-color="#FF2C3A" />
+        <stop stopColor="#FFA100" stopOpacity="0" />
+        <stop offset="0.1593" stopColor="#FF9C03" stopOpacity="0.159" />
+        <stop offset="0.3553" stopColor="#FF8D0A" stopOpacity="0.355" />
+        <stop offset="0.5705" stopColor="#FF7416" stopOpacity="0.571" />
+        <stop offset="0.7979" stopColor="#FF5128" stopOpacity="0.798" />
+        <stop offset="1" stopColor="#FF2C3A" />
       </linearGradient>
       <linearGradient
         id="paint2_linear_2_4937"
@@ -942,12 +942,12 @@ export const EmailsIcon: React.FC<{ className?: string }> = ({
         y2="19.7203"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FFA100" stop-opacity="0" />
-        <stop offset="0.1593" stop-color="#FF9C03" stop-opacity="0.159" />
-        <stop offset="0.3553" stop-color="#FF8D0A" stop-opacity="0.355" />
-        <stop offset="0.5705" stop-color="#FF7416" stop-opacity="0.571" />
-        <stop offset="0.7979" stop-color="#FF5128" stop-opacity="0.798" />
-        <stop offset="1" stop-color="#FF2C3A" />
+        <stop stopColor="#FFA100" stopOpacity="0" />
+        <stop offset="0.1593" stopColor="#FF9C03" stopOpacity="0.159" />
+        <stop offset="0.3553" stopColor="#FF8D0A" stopOpacity="0.355" />
+        <stop offset="0.5705" stopColor="#FF7416" stopOpacity="0.571" />
+        <stop offset="0.7979" stopColor="#FF5128" stopOpacity="0.798" />
+        <stop offset="1" stopColor="#FF2C3A" />
       </linearGradient>
       <linearGradient
         id="paint3_linear_2_4937"
@@ -957,8 +957,8 @@ export const EmailsIcon: React.FC<{ className?: string }> = ({
         y2="22.4239"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#B4EBA8" />
-        <stop offset="1" stop-color="#24CE20" />
+        <stop stopColor="#B4EBA8" />
+        <stop offset="1" stopColor="#24CE20" />
       </linearGradient>
       <linearGradient
         id="paint4_linear_2_4937"
@@ -968,8 +968,8 @@ export const EmailsIcon: React.FC<{ className?: string }> = ({
         y2="21.0893"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#007E49" stop-opacity="0" />
-        <stop offset="1" stop-color="#007E49" />
+        <stop stopColor="#007E49" stopOpacity="0" />
+        <stop offset="1" stopColor="#007E49" />
       </linearGradient>
       <linearGradient
         id="paint5_linear_2_4937"
@@ -979,11 +979,11 @@ export const EmailsIcon: React.FC<{ className?: string }> = ({
         y2="15.4792"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#D9B1EE" />
-        <stop offset="0.1735" stop-color="#CFA6E6" />
-        <stop offset="0.4762" stop-color="#B789D0" />
-        <stop offset="0.8697" stop-color="#905BAD" />
-        <stop offset="1" stop-color="#814AA0" />
+        <stop stopColor="#D9B1EE" />
+        <stop offset="0.1735" stopColor="#CFA6E6" />
+        <stop offset="0.4762" stopColor="#B789D0" />
+        <stop offset="0.8697" stopColor="#905BAD" />
+        <stop offset="1" stopColor="#814AA0" />
       </linearGradient>
       <linearGradient
         id="paint6_linear_2_4937"
@@ -993,8 +993,8 @@ export const EmailsIcon: React.FC<{ className?: string }> = ({
         y2="12.3799"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FFF9F7" />
-        <stop offset="1" stop-color="#FFDDCC" />
+        <stop stopColor="#FFF9F7" />
+        <stop offset="1" stopColor="#FFDDCC" />
       </linearGradient>
       <linearGradient
         id="paint7_linear_2_4937"
@@ -1004,8 +1004,8 @@ export const EmailsIcon: React.FC<{ className?: string }> = ({
         y2="30.9264"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FFF9F7" />
-        <stop offset="1" stop-color="#FFDDCC" />
+        <stop stopColor="#FFF9F7" />
+        <stop offset="1" stopColor="#FFDDCC" />
       </linearGradient>
       <linearGradient
         id="paint8_linear_2_4937"
@@ -1015,8 +1015,8 @@ export const EmailsIcon: React.FC<{ className?: string }> = ({
         y2="15.0443"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FFF9F7" />
-        <stop offset="1" stop-color="#FFDDCC" />
+        <stop stopColor="#FFF9F7" />
+        <stop offset="1" stopColor="#FFDDCC" />
       </linearGradient>
       <linearGradient
         id="paint9_linear_2_4937"
@@ -1026,8 +1026,8 @@ export const EmailsIcon: React.FC<{ className?: string }> = ({
         y2="14.1925"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FFA0AD" />
-        <stop offset="1" stop-color="#FF4465" />
+        <stop stopColor="#FFA0AD" />
+        <stop offset="1" stopColor="#FF4465" />
       </linearGradient>
       <linearGradient
         id="paint10_linear_2_4937"
@@ -1037,8 +1037,8 @@ export const EmailsIcon: React.FC<{ className?: string }> = ({
         y2="15.3338"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FFA0AD" />
-        <stop offset="1" stop-color="#FF4465" />
+        <stop stopColor="#FFA0AD" />
+        <stop offset="1" stopColor="#FF4465" />
       </linearGradient>
       <linearGradient
         id="paint11_linear_2_4937"
@@ -1048,8 +1048,8 @@ export const EmailsIcon: React.FC<{ className?: string }> = ({
         y2="17.1042"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FFA0AD" />
-        <stop offset="1" stop-color="#FF4465" />
+        <stop stopColor="#FFA0AD" />
+        <stop offset="1" stopColor="#FF4465" />
       </linearGradient>
       <linearGradient
         id="paint12_linear_2_4937"
@@ -1059,8 +1059,8 @@ export const EmailsIcon: React.FC<{ className?: string }> = ({
         y2="18.0497"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FFA0AD" />
-        <stop offset="1" stop-color="#FF4465" />
+        <stop stopColor="#FFA0AD" />
+        <stop offset="1" stopColor="#FF4465" />
       </linearGradient>
       <linearGradient
         id="paint13_linear_2_4937"
@@ -1070,8 +1070,8 @@ export const EmailsIcon: React.FC<{ className?: string }> = ({
         y2="17.7594"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FFA0AD" />
-        <stop offset="1" stop-color="#FF4465" />
+        <stop stopColor="#FFA0AD" />
+        <stop offset="1" stopColor="#FF4465" />
       </linearGradient>
       <linearGradient
         id="paint14_linear_2_4937"
@@ -1081,8 +1081,8 @@ export const EmailsIcon: React.FC<{ className?: string }> = ({
         y2="10.7523"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FFEFA4" />
-        <stop offset="1" stop-color="#FFBE50" />
+        <stop stopColor="#FFEFA4" />
+        <stop offset="1" stopColor="#FFBE50" />
       </linearGradient>
       <linearGradient
         id="paint15_linear_2_4937"
@@ -1092,8 +1092,8 @@ export const EmailsIcon: React.FC<{ className?: string }> = ({
         y2="18.991"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FFEFA4" />
-        <stop offset="1" stop-color="#FFBE50" />
+        <stop stopColor="#FFEFA4" />
+        <stop offset="1" stopColor="#FFBE50" />
       </linearGradient>
       <linearGradient
         id="paint16_linear_2_4937"
@@ -1103,8 +1103,8 @@ export const EmailsIcon: React.FC<{ className?: string }> = ({
         y2="29.7858"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#5B3374" stop-opacity="0" />
-        <stop offset="1" stop-color="#5B3374" />
+        <stop stopColor="#5B3374" stopOpacity="0" />
+        <stop offset="1" stopColor="#5B3374" />
       </linearGradient>
       <linearGradient
         id="paint17_linear_2_4937"
@@ -1114,8 +1114,8 @@ export const EmailsIcon: React.FC<{ className?: string }> = ({
         y2="40.0851"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FFEFA4" />
-        <stop offset="1" stop-color="#FFBE50" />
+        <stop stopColor="#FFEFA4" />
+        <stop offset="1" stopColor="#FFBE50" />
       </linearGradient>
       <linearGradient
         id="paint18_linear_2_4937"
@@ -1125,12 +1125,12 @@ export const EmailsIcon: React.FC<{ className?: string }> = ({
         y2="32.4559"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FFA100" stop-opacity="0" />
-        <stop offset="0.1593" stop-color="#FF9C03" stop-opacity="0.159" />
-        <stop offset="0.3553" stop-color="#FF8D0A" stop-opacity="0.355" />
-        <stop offset="0.5705" stop-color="#FF7416" stop-opacity="0.571" />
-        <stop offset="0.7979" stop-color="#FF5128" stop-opacity="0.798" />
-        <stop offset="1" stop-color="#FF2C3A" />
+        <stop stopColor="#FFA100" stopOpacity="0" />
+        <stop offset="0.1593" stopColor="#FF9C03" stopOpacity="0.159" />
+        <stop offset="0.3553" stopColor="#FF8D0A" stopOpacity="0.355" />
+        <stop offset="0.5705" stopColor="#FF7416" stopOpacity="0.571" />
+        <stop offset="0.7979" stopColor="#FF5128" stopOpacity="0.798" />
+        <stop offset="1" stopColor="#FF2C3A" />
       </linearGradient>
       <linearGradient
         id="paint19_linear_2_4937"
@@ -1140,8 +1140,8 @@ export const EmailsIcon: React.FC<{ className?: string }> = ({
         y2="39.9807"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FFEFA4" />
-        <stop offset="1" stop-color="#FFBE50" />
+        <stop stopColor="#FFEFA4" />
+        <stop offset="1" stopColor="#FFBE50" />
       </linearGradient>
       <linearGradient
         id="paint20_linear_2_4937"
@@ -1151,12 +1151,12 @@ export const EmailsIcon: React.FC<{ className?: string }> = ({
         y2="41.536"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FFA100" stop-opacity="0" />
-        <stop offset="0.1593" stop-color="#FF9C03" stop-opacity="0.159" />
-        <stop offset="0.3553" stop-color="#FF8D0A" stop-opacity="0.355" />
-        <stop offset="0.5705" stop-color="#FF7416" stop-opacity="0.571" />
-        <stop offset="0.7979" stop-color="#FF5128" stop-opacity="0.798" />
-        <stop offset="1" stop-color="#FF2C3A" />
+        <stop stopColor="#FFA100" stopOpacity="0" />
+        <stop offset="0.1593" stopColor="#FF9C03" stopOpacity="0.159" />
+        <stop offset="0.3553" stopColor="#FF8D0A" stopOpacity="0.355" />
+        <stop offset="0.5705" stopColor="#FF7416" stopOpacity="0.571" />
+        <stop offset="0.7979" stopColor="#FF5128" stopOpacity="0.798" />
+        <stop offset="1" stopColor="#FF2C3A" />
       </linearGradient>
       <clipPath id="clip0_2_4937">
         <rect width="40" height="40" fill="white" />
@@ -1213,8 +1213,8 @@ export const CoSellNetworkIcon: React.FC<{ className?: string }> = ({
         y2="21.8853"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#B3B3B3" />
-        <stop offset="1" stop-color="#E6E6E6" />
+        <stop stopColor="#B3B3B3" />
+        <stop offset="1" stopColor="#E6E6E6" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_2_4978"
@@ -1224,8 +1224,8 @@ export const CoSellNetworkIcon: React.FC<{ className?: string }> = ({
         y2="9.73053e-05"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#B3B3B3" />
-        <stop offset="1" stop-color="#E6E6E6" />
+        <stop stopColor="#B3B3B3" />
+        <stop offset="1" stopColor="#E6E6E6" />
       </linearGradient>
       <linearGradient
         id="paint2_linear_2_4978"
@@ -1235,8 +1235,8 @@ export const CoSellNetworkIcon: React.FC<{ className?: string }> = ({
         y2="4.29443"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FF9500" />
-        <stop offset="1" stop-color="#FFCC1E" />
+        <stop stopColor="#FF9500" />
+        <stop offset="1" stopColor="#FFCC1E" />
       </linearGradient>
       <linearGradient
         id="paint3_linear_2_4978"
@@ -1246,8 +1246,8 @@ export const CoSellNetworkIcon: React.FC<{ className?: string }> = ({
         y2="-9.78337e-05"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FF9500" />
-        <stop offset="1" stop-color="#FFCC1E" />
+        <stop stopColor="#FF9500" />
+        <stop offset="1" stopColor="#FFCC1E" />
       </linearGradient>
       <linearGradient
         id="paint4_linear_2_4978"
@@ -1257,8 +1257,8 @@ export const CoSellNetworkIcon: React.FC<{ className?: string }> = ({
         y2="1.80469"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FFBD00" />
-        <stop offset="1" stop-color="#FFF065" />
+        <stop stopColor="#FFBD00" />
+        <stop offset="1" stopColor="#FFF065" />
       </linearGradient>
       <linearGradient
         id="paint5_linear_2_4978"
@@ -1268,8 +1268,8 @@ export const CoSellNetworkIcon: React.FC<{ className?: string }> = ({
         y2="4.91309"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FF9500" />
-        <stop offset="1" stop-color="#FFCC1E" />
+        <stop stopColor="#FF9500" />
+        <stop offset="1" stopColor="#FFCC1E" />
       </linearGradient>
       <linearGradient
         id="paint6_linear_2_4978"
@@ -1279,8 +1279,8 @@ export const CoSellNetworkIcon: React.FC<{ className?: string }> = ({
         y2="28.532"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#CCCCCC" />
-        <stop offset="1" stop-color="#999999" />
+        <stop stopColor="#CCCCCC" />
+        <stop offset="1" stopColor="#999999" />
       </linearGradient>
     </defs>
   </svg>

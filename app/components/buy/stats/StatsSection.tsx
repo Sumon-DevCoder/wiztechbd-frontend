@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import SectionHeader from "../../Shared/SectionHeader";
 import StatCard from "./StatCard";
 
 const StatsSection = () => {
@@ -36,75 +37,63 @@ const StatsSection = () => {
 
       <div className="container mx-auto max-w-6xl relative z-10">
         {/* Hero Section */}
-        <div className="text-center mb-8 sm:mb-10 md:mb-12">
-          {/* BUILD FOR YOU Tag */}
-          <div className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 bg-[#1B162699] backdrop-blur-sm rounded-full mb-3 sm:mb-4">
-            <span className="text-white text-[10px] sm:text-xs font-semibold">
-              BUILD FOR YOU
-            </span>
+        <SectionHeader
+          badgeText="BUILD FOR YOU"
+          badgeBackground="#1B162699"
+          badgeTextColor="text-white"
+          badgeClassName="backdrop-blur-sm"
+          title={
+            <>
+              Built for Creators.
+              <br />
+              Powered for Profit.
+            </>
+          }
+          titleAs="h1"
+          titleGradient="linear-gradient(93.35deg, #FFFFFF 17.83%, #A5C5DD 80.08%)"
+          description="Create and sell courses, consulting services, and communities - with Zero marketing cost and a built-in sales network."
+          descriptionColor="text-white/90"
+          descriptionClassName="max-w-3xl mb-6 sm:mb-8 px-4"
+        />
+
+        {/* Email Input Section */}
+        <form
+          onSubmit={handleSubmit}
+          className="max-w-xs sm:max-w-sm md:max-w-md mx-auto mb-3 sm:mb-4 px-2"
+        >
+          <div className="relative flex items-center justify-center">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter Your Email Here"
+              className="w-full h-12 sm:h-14 md:h-16 bg-[#3B3B4B] border border-white/20 rounded-full pr-24 sm:pr-32 md:pr-36 pl-3 sm:pl-4 py-2 sm:py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/30 text-xs sm:text-sm"
+              required
+            />
+            <button
+              type="submit"
+              className="absolute cursor-pointer right-0.5 sm:right-1 top-1/2 -translate-y-1/2 text-white font-semibold rounded-full px-3 sm:px-4 md:px-6 py-3.5 sm:py-2 md:py-3 transition-all duration-300 text-xs sm:text-sm whitespace-nowrap hover:shadow-lg hover:shadow-purple-500/50 hover:brightness-110 active:scale-100"
+              style={{
+                background:
+                  "linear-gradient(214.18deg, rgba(105, 63, 255, 0.99) 20.22%, #C02EE5 77.53%)",
+              }}
+            >
+              <div className="flex flex-col items-center text-center">
+                <span className="text-xs sm:text-sm md:text-base font-bold leading-tight">
+                  Start for Free
+                </span>
+                <span className="text-[10px] sm:text-xs font-normal leading-tight hidden sm:block">
+                  No credit card Required
+                </span>
+              </div>
+            </button>
           </div>
+        </form>
 
-          {/* Main Headline */}
-          <h1
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight px-2"
-            style={{
-              background:
-                "linear-gradient(93.35deg, #FFFFFF 17.83%, #A5C5DD 80.08%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            Built for Creators.
-            <br />
-            Powered for Profit.
-          </h1>
-
-          {/* Sub-headline */}
-          <p className="text-white/90 text-sm sm:text-base md:text-lg max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
-            Create and sell courses, consulting services, and communities - with
-            Zero marketing cost and a built-in sales network.
-          </p>
-
-          {/* Email Input Section */}
-          <form
-            onSubmit={handleSubmit}
-            className="max-w-xs sm:max-w-sm md:max-w-md mx-auto mb-3 sm:mb-4 px-2"
-          >
-            <div className="relative flex items-center justify-center">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter Your Email Here"
-                className="w-full h-12 sm:h-14 md:h-16 bg-[#3B3B4B] border border-white/20 rounded-full pr-24 sm:pr-32 md:pr-36 pl-3 sm:pl-4 py-2 sm:py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/30 text-xs sm:text-sm"
-                required
-              />
-              <button
-                type="submit"
-                className="absolute cursor-pointer right-0.5 sm:right-1 top-1/2 -translate-y-1/2 text-white font-semibold rounded-full px-3 sm:px-4 md:px-6 py-3.5 sm:py-2 md:py-3 transition-all duration-300 text-xs sm:text-sm whitespace-nowrap hover:shadow-lg hover:shadow-purple-500/50 hover:brightness-110 active:scale-100"
-                style={{
-                  background:
-                    "linear-gradient(214.18deg, rgba(105, 63, 255, 0.99) 20.22%, #C02EE5 77.53%)",
-                }}
-              >
-                <div className="flex flex-col items-center text-center">
-                  <span className="text-xs sm:text-sm md:text-base font-bold leading-tight">
-                    Start for Free
-                  </span>
-                  <span className="text-[10px] sm:text-xs font-normal leading-tight hidden sm:block">
-                    No credit card Required
-                  </span>
-                </div>
-              </button>
-            </div>
-          </form>
-
-          {/* Legal Disclaimer */}
-          <p className="text-white/60 text-[10px] sm:text-xs px-4">
-            By proceeding you agree to our Platform terms & Privacy Notice
-          </p>
-        </div>
+        {/* Legal Disclaimer */}
+        <p className="text-white/60 text-[10px] mb-10 sm:text-xs px-4 text-center">
+          By proceeding you agree to our Platform terms & Privacy Notice
+        </p>
 
         {/* Stats Section */}
         <div className="bg-[#1a0f1a]/50 backdrop-blur-sm border border-white/20 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 relative">

@@ -5,6 +5,7 @@ import { dummyProperties, type Property } from "../../../data/properties";
 import FilterSidebar from "./FilterSidebar";
 import Pagination from "./Pagination";
 import PropertyCard from "./PropertyCard";
+import PropertyModal from "./PropertyModal";
 
 const Property = () => {
   // Calculate min and max price from dummy data
@@ -52,6 +53,10 @@ const Property = () => {
   );
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
+  const [selectedProperty, setSelectedProperty] = useState<Property | null>(
+    null
+  );
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
   // Filter and sort properties
   const filteredAndSortedProperties = useMemo(() => {
@@ -133,12 +138,25 @@ const Property = () => {
     setAmenities(filterOptions.amenities);
   };
 
+  const handlePropertyClick = (property: Property) => {
+    setSelectedProperty(property);
+    setSelectedImageIndex(0);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedProperty(null);
+  };
+
+  const handleImageSelect = (index: number) => {
+    setSelectedImageIndex(index);
+  };
+
   return (
     <div className="min-h-screen">
-      <div className="px-4 py-8">
-        <div className="flex flex-col lg:flex-row gap-6">
+      <div className="px-4 sm:px-6 md:px-8 py-8">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-6">
           {/* Left Sidebar - Filters */}
-          <aside className="lg:sticky lg:top-20 lg:h-fit">
+          <aside className="md:sticky md:top-20 md:h-fit md:w-80 lg:w-80">
             <FilterSidebar
               rentBudget={rentBudget}
               onRentBudgetChange={setRentBudget}
@@ -167,17 +185,17 @@ const Property = () => {
           </aside>
 
           {/* Right Section - Property Listings */}
-          <main className="flex-1">
+          <main className="flex-1 min-w-0">
             {/* Results Header */}
-            <div className="flex border border-[#E6E9ED] rounded-lg px-3 py-1 flex-col lg:flex-row items-start sm:items-center justify-between mb-6 gap-2">
-              <div className="text-gray-700">
+            <div className="sticky top-0 z-10 bg-white flex border border-[#E6E9ED] rounded-lg px-3 py-1 flex-col md:flex-row items-start md:items-center justify-between mb-6 gap-2 md:gap-4">
+              <div className="text-gray-700 shrink-0 md:hidden lg:block">
                 <span className="font-bold text-gray-900">Property</span>
-                <span className="text-gray-500 text-sm">
+                <span className="text-gray-500 text-sm whitespace-nowrap">
                   {" "}
                   — Showing result- ({filteredAndSortedProperties.length})
                 </span>
               </div>
-              <div className="relative bg-[#E6E9ED] p-2 rounded-lg">
+              <div className="relative bg-[#E6E9ED] p-2 rounded-lg shrink-0">
                 <label
                   htmlFor="sort"
                   className="block text-xs  text-gray-500 mb-0 leading-tight"
@@ -218,9 +236,13 @@ const Property = () => {
             {/* Property Grid */}
             {paginatedProperties.length > 0 ? (
               <>
-                <div className="grid grid-cols-1 md:grid-cols-2  gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
                   {paginatedProperties.map((property) => (
-                    <PropertyCard key={property.id} property={property} />
+                    <PropertyCard
+                      key={property.id}
+                      property={property}
+                      onClick={() => handlePropertyClick(property)}
+                    />
                   ))}
                 </div>
 
@@ -249,6 +271,16 @@ const Property = () => {
           </main>
         </div>
       </div>
+
+      {/* Property Modal */}
+      {selectedProperty && (
+        <PropertyModal
+          property={selectedProperty}
+          selectedImageIndex={selectedImageIndex}
+          onClose={handleCloseModal}
+          onImageSelect={handleImageSelect}
+        />
+      )}
     </div>
   );
 };

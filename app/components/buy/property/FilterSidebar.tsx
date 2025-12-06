@@ -35,6 +35,8 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
   const [isPropertyTypeOpen, setIsPropertyTypeOpen] = useState(true);
   const [isAmenitiesOpen, setIsAmenitiesOpen] = useState(true);
   const [showAllAmenities, setShowAllAmenities] = useState(false);
+  const [showAllSuburbs, setShowAllSuburbs] = useState(false);
+  const [showAllPropertyTypes, setShowAllPropertyTypes] = useState(false);
 
   const handleSliderChange = (
     e: React.ChangeEvent<HTMLInputElement>,
@@ -49,15 +51,15 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
   };
 
   return (
-    <div className="w-full md:w-80 space-y-4">
+    <div className="w-full md:w-full space-y-4">
       {/* Property Preference */}
-      <div className="bg-white rounded-lg border border-[#E6E9ED] px-4 py-2.5 mb-4 flex items-center justify-between">
+      <div className="bg-white rounded-lg border border-[#E6E9ED] px-4 py-2.5 mb-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0">
         <span className="text-gray-700 font-medium text-sm">
           Property Preference
         </span>
         <button
           onClick={onResetFilters}
-          className="bg-[#F4F6F8] border border-gray-300 rounded-md px-3 py-3 hover:bg-gray-200 hover:border-gray-400 transition-colors text-sm font-medium flex items-center gap-2 text-gray-700 cursor-pointer"
+          className="bg-[#F4F6F8] border border-gray-300 rounded-md px-3 py-2 sm:py-3 hover:bg-gray-200 hover:border-gray-400 transition-colors text-sm font-medium flex items-center gap-2 text-gray-700 cursor-pointer w-full sm:w-auto"
         >
           Reset Filter
           <svg
@@ -238,20 +240,31 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
         </button>
         {isSuburbOpen && (
           <div className="space-y-2">
-            {suburbs.map((suburb, index) => (
-              <label
-                key={index}
-                className="flex items-center gap-2 cursor-pointer hover:text-[#59344F] transition-colors"
+            {(showAllSuburbs ? suburbs : suburbs.slice(0, 4)).map((suburb) => {
+              const actualIndex = suburbs.findIndex((s) => s === suburb);
+              return (
+                <label
+                  key={actualIndex}
+                  className="flex items-center gap-2 cursor-pointer hover:text-[#59344F] transition-colors"
+                >
+                  <input
+                    type="checkbox"
+                    checked={suburb.checked}
+                    onChange={() => onSuburbChange(actualIndex)}
+                    className="w-4 h-4 text-[#59344F] border-gray-300 rounded focus:ring-[#59344F] focus:ring-2"
+                  />
+                  <span className="text-sm">{suburb.name}</span>
+                </label>
+              );
+            })}
+            {suburbs.length > 4 && (
+              <button
+                onClick={() => setShowAllSuburbs(!showAllSuburbs)}
+                className="text-[#6C0443] font-bold text-sm cursor-pointer underline"
               >
-                <input
-                  type="checkbox"
-                  checked={suburb.checked}
-                  onChange={() => onSuburbChange(index)}
-                  className="w-4 h-4 text-[#59344F] border-gray-300 rounded focus:ring-[#59344F] focus:ring-2 focu"
-                />
-                <span className="text-sm">{suburb.name}</span>
-              </label>
-            ))}
+                {showAllSuburbs ? "see less" : "see more"}
+              </button>
+            )}
           </div>
         )}
       </div>
@@ -281,20 +294,34 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
         </button>
         {isPropertyTypeOpen && (
           <div className="space-y-2">
-            {propertyTypes.map((type, index) => (
-              <label
-                key={index}
-                className="flex items-center gap-2 cursor-pointer hover:text-[#59344F] transition-colors"
+            {(showAllPropertyTypes
+              ? propertyTypes
+              : propertyTypes.slice(0, 4)
+            ).map((type) => {
+              const actualIndex = propertyTypes.findIndex((t) => t === type);
+              return (
+                <label
+                  key={actualIndex}
+                  className="flex items-center gap-2 cursor-pointer hover:text-[#59344F] transition-colors"
+                >
+                  <input
+                    type="checkbox"
+                    checked={type.checked}
+                    onChange={() => onPropertyTypeChange(actualIndex)}
+                    className="w-4 h-4 text-[#59344F] border-gray-300 rounded focus:ring-[#59344F] focus:ring-2"
+                  />
+                  <span className="text-sm">{type.name}</span>
+                </label>
+              );
+            })}
+            {propertyTypes.length > 4 && (
+              <button
+                onClick={() => setShowAllPropertyTypes(!showAllPropertyTypes)}
+                className="text-[#59344F] text-sm font-medium hover:underline"
               >
-                <input
-                  type="checkbox"
-                  checked={type.checked}
-                  onChange={() => onPropertyTypeChange(index)}
-                  className="w-4 h-4 text-[#59344F] border-gray-300 rounded focus:ring-[#59344F] focus:ring-2"
-                />
-                <span className="text-sm">{type.name}</span>
-              </label>
-            ))}
+                {showAllPropertyTypes ? "see less" : "see more"}
+              </button>
+            )}
           </div>
         )}
       </div>
@@ -325,20 +352,23 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
         {isAmenitiesOpen && (
           <div className="space-y-2">
             {(showAllAmenities ? amenities : amenities.slice(0, 4)).map(
-              (amenity, index) => (
-                <label
-                  key={index}
-                  className="flex items-center gap-2 cursor-pointer hover:text-[#59344F] transition-colors"
-                >
-                  <input
-                    type="checkbox"
-                    checked={amenity.checked}
-                    onChange={() => onAmenityChange(index)}
-                    className="w-4 h-4 text-[#59344F] border-gray-300 rounded focus:ring-[#59344F] focus:ring-2"
-                  />
-                  <span className="text-sm">{amenity.name}</span>
-                </label>
-              )
+              (amenity) => {
+                const actualIndex = amenities.findIndex((a) => a === amenity);
+                return (
+                  <label
+                    key={actualIndex}
+                    className="flex items-center gap-2 cursor-pointer hover:text-[#59344F] transition-colors"
+                  >
+                    <input
+                      type="checkbox"
+                      checked={amenity.checked}
+                      onChange={() => onAmenityChange(actualIndex)}
+                      className="w-4 h-4 text-[#59344F] border-gray-300 rounded focus:ring-[#59344F] focus:ring-2"
+                    />
+                    <span className="text-sm">{amenity.name}</span>
+                  </label>
+                );
+              }
             )}
             {amenities.length > 4 && (
               <button

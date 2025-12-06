@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { testimonials } from "../../../data/testimonials";
 import TestimonialCard from "./TestimonialCard";
+import SectionHeader from "../../Shared/SectionHeader";
 
 const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -65,28 +66,20 @@ const Testimonial = () => {
     >
       <div className="container mx-auto max-w-7xl">
         {/* Header Section */}
-        <div className="text-center mb-8 sm:mb-10 md:mb-12">
-          {/* Pill Badge */}
-          <div
-            className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 text-black text-[10px] sm:text-xs font-bold rounded-full mb-3 sm:mb-4"
-            style={{
-              background: "linear-gradient(89.85deg, #FAC1FD 0%, #F75EFF 100%)",
-            }}
-          >
-            TESTIMONIALS
-          </div>
-
-          {/* Title */}
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 leading-tight px-2">
-            Trusted by Creators
-            <br className="hidden sm:block" />& Proven by Results.
-          </h2>
-
-          {/* Description */}
-          <p className="text-white/80 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-2">
-            See how others grow with Growhubs — real stories, real success.
-          </p>
-        </div>
+        <SectionHeader
+          badgeText="TESTIMONIALS"
+          badgeGradient="linear-gradient(89.85deg, #FAC1FD 0%, #F75EFF 100%)"
+          title={
+            <>
+              Trusted by Creators
+              <br className="hidden sm:block" />& Proven by Results.
+            </>
+          }
+          titleAs="h2"
+          titleColor="text-white"
+          description="See how others grow with Growhubs — real stories, real success."
+          descriptionColor="text-white/80"
+        />
 
         {/* Carousel Container */}
         <div className="relative">

@@ -9,6 +9,7 @@ import {
   PagesIcon,
   PaymentsIcon,
 } from "./ToolIcons";
+import SectionHeader from "../../Shared/SectionHeader";
 
 const EssientialTools = () => {
   const tools = [
@@ -66,32 +67,24 @@ const EssientialTools = () => {
     <section className="bg-[#FDF6E8] py-16 px-4">
       <div className="container mx-auto max-w-7xl">
         {/* Header Section */}
-        <div className="text-center mb-12">
-          {/* Pill Label */}
-          <div
-            className="inline-block px-4 py-1.5 text-black  text-xs font-bold rounded-full mb-4"
-            style={{
-              backgroundColor: "#BCB3A0",
-              background:
-                "linear-gradient(84deg, rgba(188, 179, 160, 1) 0%, rgba(224, 216, 201, 1) 80%)",
-            }}
-          >
-            ESSENTIAL TOOLS
-          </div>
-
-          {/* Title */}
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            Essential Tools
-            <br />
-            Zero Distractions
-          </h2>
-
-          {/* Description */}
-          <p className="text-gray-700 text-lg max-w-2xl mx-auto">
-            Create diverse products on the platform and leverage our powerful
-            tools to drive sales within and beyond GrowHubs.
-          </p>
-        </div>
+        <SectionHeader
+          badgeText="ESSENTIAL TOOLS"
+          badgeGradient="linear-gradient(84deg, rgba(188, 179, 160, 1) 0%, rgba(224, 216, 201, 1) 80%)"
+          title={
+            <>
+              Essential Tools
+              <br />
+              Zero Distractions
+            </>
+          }
+          titleAs="h2"
+          titleColor="text-gray-800"
+          description="Create diverse products on the platform and leverage our powerful tools to drive sales within and beyond GrowHubs."
+          descriptionColor="text-gray-700"
+          className="mb-12"
+          titleClassName="text-4xl md:text-5xl"
+          descriptionClassName="text-lg"
+        />
 
         {/* Tools Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -4,7 +4,7 @@ import React from "react";
 interface Property {
   id: number;
   name: string;
-  image: string;
+  images: string[];
   beds: number;
   bathrooms: number;
   sqft: number;
@@ -14,14 +14,18 @@ interface Property {
 
 interface PropertyCardProps {
   property: Property;
+  onClick?: () => void;
 }
 
-const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
+const PropertyCard: React.FC<PropertyCardProps> = ({ property, onClick }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+    <div
+      className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+      onClick={onClick}
+    >
       <div className="relative h-48 w-full">
         <Image
-          src={property.image}
+          src={property.images[0]}
           alt={property.name}
           fill
           className="object-cover"
