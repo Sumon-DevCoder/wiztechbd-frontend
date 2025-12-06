@@ -1,12 +1,7 @@
-import Property from "./components/buy/property/Property";
+import { redirect } from "next/navigation";
 
 const Home = () => {
-  return (
-    <div>
-      <Property />
-      {/* <StatsSection /> */}
-    </div>
-  );
+  redirect("/buy");
 };
 
 export default Home;

@@ -25,22 +25,10 @@ const StatsSection = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `radial-gradient(1.5px 1.5px at 15% 25%, rgba(255,255,255,0.8), transparent),
-                             radial-gradient(1px 1px at 35% 45%, rgba(255,255,255,0.6), transparent),
-                             radial-gradient(2px 2px at 55% 15%, rgba(255,255,255,0.7), transparent),
-                             radial-gradient(1px 1px at 75% 65%, rgba(255,255,255,0.6), transparent),
-                             radial-gradient(1.5px 1.5px at 25% 75%, rgba(255,255,255,0.7), transparent),
-                             radial-gradient(1px 1px at 45% 35%, rgba(255,255,255,0.5), transparent),
-                             radial-gradient(2px 2px at 65% 85%, rgba(255,255,255,0.8), transparent),
-                             radial-gradient(1px 1px at 85% 25%, rgba(255,255,255,0.6), transparent),
-                             radial-gradient(1.5px 1.5px at 10% 50%, rgba(255,255,255,0.7), transparent),
-                             radial-gradient(1px 1px at 30% 80%, rgba(255,255,255,0.5), transparent),
-                             radial-gradient(2px 2px at 50% 5%, rgba(255,255,255,0.8), transparent),
-                             radial-gradient(1px 1px at 70% 40%, rgba(255,255,255,0.6), transparent),
-                             radial-gradient(1.5px 1.5px at 90% 70%, rgba(255,255,255,0.7), transparent),
-                             radial-gradient(1px 1px at 5% 90%, rgba(255,255,255,0.5), transparent),
-                             radial-gradient(2px 2px at 95% 10%, rgba(255,255,255,0.8), transparent)`,
-            backgroundSize: "100% 100%",
+            backgroundImage: `url('/images/stats/stats-img.png')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
             opacity: 0.4,
           }}
         />
@@ -50,7 +38,7 @@ const StatsSection = () => {
         {/* Hero Section */}
         <div className="text-center mb-8 sm:mb-10 md:mb-12">
           {/* BUILD FOR YOU Tag */}
-          <div className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 bg-white/10 backdrop-blur-sm rounded-full mb-3 sm:mb-4">
+          <div className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 bg-[#1B162699] backdrop-blur-sm rounded-full mb-3 sm:mb-4">
             <span className="text-white text-[10px] sm:text-xs font-semibold">
               BUILD FOR YOU
             </span>
@@ -94,9 +82,10 @@ const StatsSection = () => {
               />
               <button
                 type="submit"
-                className="absolute right-1 sm:right-1.5 top-1/2 -translate-y-1/2 text-white font-semibold rounded-full px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 transition-all text-xs sm:text-sm whitespace-nowrap"
+                className="absolute cursor-pointer right-0.5 sm:right-1 top-1/2 -translate-y-1/2 text-white font-semibold rounded-full px-3 sm:px-4 md:px-6 py-3.5 sm:py-2 md:py-3 transition-all duration-300 text-xs sm:text-sm whitespace-nowrap hover:shadow-lg hover:shadow-purple-500/50 hover:brightness-110 active:scale-100"
                 style={{
-                  background: "linear-gradient(to right, #9d4edd, #f75eff)",
+                  background:
+                    "linear-gradient(214.18deg, rgba(105, 63, 255, 0.99) 20.22%, #C02EE5 77.53%)",
                 }}
               >
                 <div className="flex flex-col items-center text-center">
@@ -157,7 +146,7 @@ const StatsSection = () => {
           {/* Bottom Text */}
           <div className="mt-4 sm:mt-6 md:mt-8 bg-[#FFF3D8]/60 rounded-lg py-3 sm:py-4 w-full overflow-hidden">
             <div className="overflow-hidden">
-              <p className="text-white/70 text-xs sm:text-sm whitespace-nowrap inline-block marquee">
+              <p className="text-[#0b0803] text-xs sm:text-sm whitespace-nowrap inline-block marquee">
                 Unlike Kajabi, Teachable, or Skool, Growhubs helps you find and
                 convert clients inside the platform so you can sell from day
                 one. • Unlike Kajabi, Teachable, or Skool, Growhubs helps you

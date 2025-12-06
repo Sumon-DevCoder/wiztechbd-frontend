@@ -168,7 +168,7 @@ const ServicesOverview = () => {
           "linear-gradient(180deg, rgba(249, 196, 254, 0) 0%, rgba(252, 221, 255, 0.5) 44.34%, rgba(249, 196, 254, 0) 100%)",
       }}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div className="px-4 sm:px-6 lg:px-8">
         {/* Trust Section */}
         <div className="text-center mb-8 sm:mb-10 md:mb-12">
           <p className="text-gray-600 text-xs sm:text-sm font-medium mb-4 sm:mb-6">
@@ -237,7 +237,6 @@ const ServicesOverview = () => {
             description={coursesDescription}
             buttonText="Learn More"
             gradientColors="from-[#59344F] to-[#42232B]"
-            showLaptop={true}
           />
         )}
       </div>

@@ -1,10 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
+import "./FilterSidebar.css";
 
 interface FilterSidebarProps {
   rentBudget: [number, number];
   onRentBudgetChange: (range: [number, number]) => void;
+  minPrice: number;
+  maxPrice: number;
   suburbs: { name: string; checked: boolean }[];
   onSuburbChange: (index: number) => void;
   propertyTypes: { name: string; checked: boolean }[];
@@ -17,6 +20,8 @@ interface FilterSidebarProps {
 const FilterSidebar: React.FC<FilterSidebarProps> = ({
   rentBudget,
   onRentBudgetChange,
+  minPrice,
+  maxPrice,
   suburbs,
   onSuburbChange,
   propertyTypes,
@@ -46,13 +51,13 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
   return (
     <div className="w-full md:w-80 space-y-4">
       {/* Property Preference */}
-      <div className="bg-gray-50 rounded-lg border border-[#E6E9ED] px-4 py-3 mb-4 flex items-center justify-between">
+      <div className="bg-white rounded-lg border border-[#E6E9ED] px-4 py-2.5 mb-4 flex items-center justify-between">
         <span className="text-gray-700 font-medium text-sm">
           Property Preference
         </span>
         <button
           onClick={onResetFilters}
-          className="bg-[#F4F6F8] border border-gray-300 rounded-md px-3 py-1.5 hover:bg-[#F4F6F8] transition-colors text-sm font-medium flex items-center gap-2 text-gray-700"
+          className="bg-[#F4F6F8] border border-gray-300 rounded-md px-3 py-3 hover:bg-gray-200 hover:border-gray-400 transition-colors text-sm font-medium flex items-center gap-2 text-gray-700 cursor-pointer"
         >
           Reset Filter
           <svg
@@ -61,11 +66,11 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
           >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
               id="SVGRepo_tracerCarrier"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
               <path d="M22.719 12A10.719 10.719 0 0 1 1.28 12h.838a9.916 9.916 0 1 0 1.373-5H8v1H2V2h1v4.2A10.71 10.71 0 0 1 22.719 12z"></path>
@@ -83,39 +88,75 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
         >
           <h3 className="font-semibold text-gray-800">Rent Budget</h3>
           <svg
-            className={`w-5 h-5 text-gray-600 transition-transform ${
-              isRentBudgetOpen ? "rotate-180" : ""
-            }`}
-            fill="none"
-            stroke="currentColor"
+            width="24"
+            height="24"
             viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
+              d="M5.25 12H19.25"
+              stroke="black"
+              strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 9l-7 7-7-7"
             />
           </svg>
         </button>
         {isRentBudgetOpen && (
           <div className="space-y-4">
-            <div className="relative">
+            {/* Dual Range Slider */}
+            <div className="relative h-8 flex items-center">
+              <div className="absolute w-full h-2 bg-[#59344F]/20 rounded-lg"></div>
+              <div
+                className="absolute h-2 bg-[#59344F] rounded-lg"
+                style={{
+                  left: `${
+                    ((rentBudget[0] - minPrice) / (maxPrice - minPrice)) * 100
+                  }%`,
+                  width: `${
+                    ((rentBudget[1] - rentBudget[0]) / (maxPrice - minPrice)) *
+                    100
+                  }%`,
+                }}
+              ></div>
+              {/* Min Circle Indicator */}
+              <div
+                className="absolute w-4 h-4 bg-[#59344F] rounded-full border-2 border-white shadow-md z-20 pointer-events-none"
+                style={{
+                  left: `calc(${
+                    ((rentBudget[0] - minPrice) / (maxPrice - minPrice)) * 100
+                  }% - 8px)`,
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                }}
+              ></div>
+              {/* Max Circle Indicator */}
+              <div
+                className="absolute w-4 h-4 bg-[#59344F] rounded-full border-2 border-white shadow-md z-20 pointer-events-none"
+                style={{
+                  left: `calc(${
+                    ((rentBudget[1] - minPrice) / (maxPrice - minPrice)) * 100
+                  }% - 8px)`,
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                }}
+              ></div>
               <input
                 type="range"
-                min="300"
-                max="670000"
+                min={minPrice}
+                max={maxPrice}
                 value={rentBudget[0]}
                 onChange={(e) => handleSliderChange(e, 0)}
-                className="w-full h-2 bg-[#59344F]/20 rounded-lg appearance-none cursor-pointer accent-[#59344F]"
+                className="absolute w-full h-2 bg-transparent appearance-none cursor-pointer z-30 slider-thumb"
               />
               <input
                 type="range"
-                min="300"
-                max="670000"
+                min={minPrice}
+                max={maxPrice}
                 value={rentBudget[1]}
                 onChange={(e) => handleSliderChange(e, 1)}
-                className="w-full h-2 bg-[#59344F]/20 rounded-lg appearance-none cursor-pointer accent-[#59344F] mt-2"
+                className="absolute w-full h-2 bg-transparent appearance-none cursor-pointer z-30 slider-thumb"
               />
             </div>
             <div className="flex gap-4">
@@ -123,39 +164,49 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                 <label className="block text-xs text-gray-600 mb-1">
                   Minimum
                 </label>
-                <input
-                  type="number"
-                  min="300"
-                  max="670000"
-                  value={rentBudget[0]}
-                  onChange={(e) => {
-                    const value = Math.max(
-                      300,
-                      Math.min(670000, parseInt(e.target.value) || 300)
-                    );
-                    onRentBudgetChange([value, rentBudget[1]]);
-                  }}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#59344F] text-sm"
-                />
+                <div className="relative">
+                  <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600 text-sm">
+                    $
+                  </span>
+                  <input
+                    type="number"
+                    min={minPrice}
+                    max={maxPrice}
+                    value={rentBudget[0]}
+                    onChange={(e) => {
+                      const value = Math.max(
+                        minPrice,
+                        Math.min(maxPrice, parseInt(e.target.value) || minPrice)
+                      );
+                      onRentBudgetChange([value, rentBudget[1]]);
+                    }}
+                    className="w-full pl-7 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#59344F] text-sm"
+                  />
+                </div>
               </div>
               <div className="flex-1">
                 <label className="block text-xs text-gray-600 mb-1">
                   Maximum
                 </label>
-                <input
-                  type="number"
-                  min="300"
-                  max="670000"
-                  value={rentBudget[1]}
-                  onChange={(e) => {
-                    const value = Math.max(
-                      rentBudget[0],
-                      Math.min(670000, parseInt(e.target.value) || 670000)
-                    );
-                    onRentBudgetChange([rentBudget[0], value]);
-                  }}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#59344F] text-sm"
-                />
+                <div className="relative">
+                  <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600 text-sm">
+                    $
+                  </span>
+                  <input
+                    type="number"
+                    min={minPrice}
+                    max={maxPrice}
+                    value={rentBudget[1]}
+                    onChange={(e) => {
+                      const value = Math.max(
+                        rentBudget[0],
+                        Math.min(maxPrice, parseInt(e.target.value) || maxPrice)
+                      );
+                      onRentBudgetChange([rentBudget[0], value]);
+                    }}
+                    className="w-full pl-7 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#59344F] text-sm"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -170,18 +221,18 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
         >
           <h3 className="font-semibold text-gray-800">Suburb</h3>
           <svg
-            className={`w-5 h-5 text-gray-600 transition-transform ${
-              isSuburbOpen ? "rotate-180" : ""
-            }`}
-            fill="none"
-            stroke="currentColor"
+            width="24"
+            height="24"
             viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
+              d="M5.25 12H19.25"
+              stroke="black"
+              strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 9l-7 7-7-7"
             />
           </svg>
         </button>
@@ -196,9 +247,9 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                   type="checkbox"
                   checked={suburb.checked}
                   onChange={() => onSuburbChange(index)}
-                  className="w-4 h-4 text-[#59344F] border-gray-300 rounded focus:ring-[#59344F] focus:ring-2"
+                  className="w-4 h-4 text-[#59344F] border-gray-300 rounded focus:ring-[#59344F] focus:ring-2 focu"
                 />
-                <span className="text-sm text-gray-700">{suburb.name}</span>
+                <span className="text-sm">{suburb.name}</span>
               </label>
             ))}
           </div>
@@ -213,18 +264,18 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
         >
           <h3 className="font-semibold text-gray-800">Property Type</h3>
           <svg
-            className={`w-5 h-5 text-gray-600 transition-transform ${
-              isPropertyTypeOpen ? "rotate-180" : ""
-            }`}
-            fill="none"
-            stroke="currentColor"
+            width="24"
+            height="24"
             viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
+              d="M5.25 12H19.25"
+              stroke="black"
+              strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 9l-7 7-7-7"
             />
           </svg>
         </button>
@@ -241,7 +292,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                   onChange={() => onPropertyTypeChange(index)}
                   className="w-4 h-4 text-[#59344F] border-gray-300 rounded focus:ring-[#59344F] focus:ring-2"
                 />
-                <span className="text-sm text-gray-700">{type.name}</span>
+                <span className="text-sm">{type.name}</span>
               </label>
             ))}
           </div>
@@ -256,18 +307,18 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
         >
           <h3 className="font-semibold text-gray-800">Amenities</h3>
           <svg
-            className={`w-5 h-5 text-gray-600 transition-transform ${
-              isAmenitiesOpen ? "rotate-180" : ""
-            }`}
-            fill="none"
-            stroke="currentColor"
+            width="24"
+            height="24"
             viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
+              d="M5.25 12H19.25"
+              stroke="black"
+              strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 9l-7 7-7-7"
             />
           </svg>
         </button>
@@ -285,7 +336,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                     onChange={() => onAmenityChange(index)}
                     className="w-4 h-4 text-[#59344F] border-gray-300 rounded focus:ring-[#59344F] focus:ring-2"
                   />
-                  <span className="text-sm text-gray-700">{amenity.name}</span>
+                  <span className="text-sm">{amenity.name}</span>
                 </label>
               )
             )}

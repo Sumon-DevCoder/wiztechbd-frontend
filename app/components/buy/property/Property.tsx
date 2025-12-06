@@ -7,6 +7,14 @@ import Pagination from "./Pagination";
 import PropertyCard from "./PropertyCard";
 
 const Property = () => {
+  // Calculate min and max price from dummy data
+  const priceRange = useMemo(() => {
+    const prices = dummyProperties.map((p) => p.price);
+    const minPrice = Math.min(...prices);
+    const maxPrice = Math.max(...prices);
+    return [minPrice, maxPrice] as [number, number];
+  }, []);
+
   // Extract unique filter options from properties data
   const filterOptions = useMemo(() => {
     // Get unique suburbs
@@ -33,7 +41,7 @@ const Property = () => {
     };
   }, []);
 
-  const [rentBudget, setRentBudget] = useState<[number, number]>([300, 670000]);
+  const [rentBudget, setRentBudget] = useState<[number, number]>(priceRange);
   const [suburbs, setSuburbs] = useState(filterOptions.suburbs);
   const [propertyTypes, setPropertyTypes] = useState(
     filterOptions.propertyTypes
@@ -119,7 +127,7 @@ const Property = () => {
   }, [rentBudget, suburbs, propertyTypes, amenities]);
 
   const handleResetFilters = () => {
-    setRentBudget([300, 670000]);
+    setRentBudget(priceRange);
     setSuburbs(filterOptions.suburbs);
     setPropertyTypes(filterOptions.propertyTypes);
     setAmenities(filterOptions.amenities);
@@ -127,13 +135,15 @@ const Property = () => {
 
   return (
     <div className="min-h-screen">
-      <div className="container mx-auto px-4 py-8">
+      <div className="px-4 py-8">
         <div className="flex flex-col lg:flex-row gap-6">
           {/* Left Sidebar - Filters */}
           <aside className="lg:sticky lg:top-20 lg:h-fit">
             <FilterSidebar
               rentBudget={rentBudget}
               onRentBudgetChange={setRentBudget}
+              minPrice={priceRange[0]}
+              maxPrice={priceRange[1]}
               suburbs={suburbs}
               onSuburbChange={(index) => {
                 const newSuburbs = [...suburbs];
@@ -159,7 +169,7 @@ const Property = () => {
           {/* Right Section - Property Listings */}
           <main className="flex-1">
             {/* Results Header */}
-            <div className="flex border border-[#E6E9ED] rounded-lg px-3 py-1.5 flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-2">
+            <div className="flex border border-[#E6E9ED] rounded-lg px-3 py-1 flex-col lg:flex-row items-start sm:items-center justify-between mb-6 gap-2">
               <div className="text-gray-700">
                 <span className="font-bold text-gray-900">Property</span>
                 <span className="text-gray-500 text-sm">
@@ -167,7 +177,7 @@ const Property = () => {
                   — Showing result- ({filteredAndSortedProperties.length})
                 </span>
               </div>
-              <div className="relative bg-[#E6E9ED] ">
+              <div className="relative bg-[#E6E9ED] p-2 rounded-lg">
                 <label
                   htmlFor="sort"
                   className="block text-xs  text-gray-500 mb-0 leading-tight"
@@ -208,7 +218,7 @@ const Property = () => {
             {/* Property Grid */}
             {paginatedProperties.length > 0 ? (
               <>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2  gap-6">
                   {paginatedProperties.map((property) => (
                     <PropertyCard key={property.id} property={property} />
                   ))}
